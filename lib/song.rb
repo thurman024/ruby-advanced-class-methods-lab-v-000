@@ -19,7 +19,7 @@ class Song
   end
 
   def self.new_by_name(title)
-    song = Song.create
+    song = Song.new
     song.name = title
     song
   end
@@ -52,6 +52,16 @@ class Song
     song_name = array[1].split(".")[0]
     #binding.pry
     new_song = Song.new_by_name(song_name)
+    new_song.artist_name = artist_name
+    new_song
+  end
+
+  def self.create_from_filename(string)
+    array = string.split(" - ")
+    artist_name = array[0]
+    song_name = array[1].split(".")[0]
+    #binding.pry
+    new_song = Song.create_by_name(song_name)
     new_song.artist_name = artist_name
     new_song
   end
