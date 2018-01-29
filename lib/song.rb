@@ -50,6 +50,7 @@ class Song
     array = string.split("-")
     artist_name = array[0]
     song_name = array[1].split(".")[0]
+    binding.pry
     new_song = Song.new_by_name(song_name)
     new_song.artist_name = artist_name
   end
