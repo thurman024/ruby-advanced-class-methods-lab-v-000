@@ -16,4 +16,6 @@ class Song
     new_song
   end
 
+  def self.new_by_name(title)
+    self.create.name = title
 end
