@@ -47,7 +47,7 @@ class Song
   end
 
   def self.new_from_filename(string)
-    array = string.split("-")
+    array = string.split(" -")
     artist_name = array[0]
     song_name = array[1].split(".")[0]
     binding.pry
